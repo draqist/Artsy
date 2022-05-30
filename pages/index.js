@@ -1,18 +1,25 @@
+/* eslint-disable react/no-unescaped-entities*/
 import { Box, Flex, FormControl, FormHelperText, FormLabel, Heading, Image, Input, Link, Text } from '@chakra-ui/react';
 import Navbar from '../components/Navbar';
 import NextLink from 'next/link'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { motion } from 'framer-motion'
 import ProjectCard from '../components/ProjectCard';
+import ImageCard from '../components/ImageCard';
+import { useEffect, useState } from 'react';
 
 
 export default function Home() {
+  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    setTimeout(() => setLoading(true), 500)
+  }, [])
   return (
     <Box w='100%' bg='#10101A'>
       <Navbar />
       <Box px='20px'>
         <Flex justifyContent='center' alignItems='center' h='500px'>
-          {/* <Image src='/handright.webp' alt='placement' w='380px' /> */}
+          {/* <Image alt='media logos' src='/handright.webp' alt='placement' w='380px' /> */}
           <Text fontSize='14px' color='white' fontFamily='Poppins'>Howdy 👋, I'm Abdullah and I develop, engineer and translate products through user interface designs into pixel-perfect, clean, optimal and reusable code. </Text>
         </Flex>
         <Box py='20px'>
@@ -22,7 +29,23 @@ export default function Home() {
           </NextLink>
         </Box>
       </Box>
-      <Box id='projects' borderTop='1px solid' p='20px' pb='30px'>
+      <Box id='projects' borderTop='1px solid' borderBottom='1px solid' p='20px' pb='30px' mb='20px'>
+          <Heading>
+            About Me
+          </Heading>
+        <Flex justifyContent='center' mt='10px'>
+          <ImageCard/>
+        </Flex>
+        <Box my='12px'>
+          <Text color='white' fontSize='18px'> 
+            I'm Abdullah, a UI Engineer and Frontend Developer. I translate interface designs, engineer and develop products by writing clean, efficient and reusable code. Creating aesthetically pleasing user interface that keeps end users glued to their screen is my forte. I am also implement efficiently business-side logic.
+          </Text>
+        </Box>
+        <Box>
+          <Heading> Tools I work with </Heading>
+        </Box>
+      </Box>
+      <Box id='projects' borderTop='1px solid' borderBottom='1px solid' p='20px' pb='30px' mb='20px'>
           <Heading>
             Projects
           </Heading>
@@ -41,7 +64,7 @@ export default function Home() {
               <NextLink passHref href=''>
                 <Link>
                   <Flex alignItems='center' justifyContent='center'>
-                    <Image src='/icons8-gmail.svg' w='48px' />
+                    <Image alt='media logos' src='/icons8-gmail.svg' w='48px' />
                     <Box display={['none', 'none', 'block']}>
                     </Box>
                   </Flex>
@@ -52,7 +75,7 @@ export default function Home() {
               <NextLink passHref href='https://twitter.com/Hackth8r'>
                 <Link>
                   <Flex alignItems='center' justifyContent='center'>
-                    <Image src='/icons8-twitter.svg' w='48px' />
+                    <Image alt='media logos' src='/icons8-twitter.svg' w='48px' />
                     <Box display={['none', 'none', 'block']}>
                     </Box>
                   </Flex>
@@ -63,7 +86,7 @@ export default function Home() {
               <NextLink passHref href='https://github.com/Draqode'>
                 <Link>
                   <Flex alignItems='center' justifyContent='center'>
-                    <Image src='/icons8-github-squared.svg' w='48px' />
+                    <Image alt='media logos' src='/icons8-github-squared.svg' w='48px' />
                     <Box display={['none', 'none', 'block']}>
                     </Box>
                   </Flex>
@@ -74,7 +97,7 @@ export default function Home() {
               <NextLink passHref href='https://github.com/Draqode'>
                 <Link>
                   <Flex alignItems='center' justifyContent='center'>
-                    <Image src='/icons8-linkedin.svg' w='48px' />
+                    <Image alt='media logos' src='/icons8-linkedin.svg' w='48px' />
                     <Box display={['none', 'none', 'block']}>
                     </Box>
                   </Flex>
@@ -85,7 +108,7 @@ export default function Home() {
               <NextLink passHref href=''>
                 <Link>
                   <Flex alignItems='center' justifyContent='center'>
-                    <Image src='/icons8-hashnode.svg' w='48px' />
+                    <Image alt='media logos' src='/icons8-hashnode.svg' w='48px' />
                     <Box display={['none', 'none', 'block']}>
                     </Box>
                   </Flex>
@@ -100,7 +123,7 @@ export default function Home() {
               <NextLink passHref href='https://twitter.com/Hackth8r'>
                 <Link>
                   <Flex alignItems='center' justifyContent='center'>
-                    <Image src='/icons8-discord-64.png' w='48px' />
+                    <Image alt='media logos' src='/icons8-discord-64.png' w='48px' />
                     <Box display={['none', 'none', 'block']}>
                     </Box>
                   </Flex>
@@ -111,7 +134,7 @@ export default function Home() {
               <NextLink passHref href='https://github.com/Draqode'>
                 <Link>
                   <Flex alignItems='center' justifyContent='center'>
-                    <Image src='/icons8-medium-monogram.svg' w='48px' />
+                    <Image alt='media logos' src='/icons8-medium-monogram.svg' w='48px' />
                     <Box display={['none', 'none', 'block']}>
                     </Box>
                   </Flex>
