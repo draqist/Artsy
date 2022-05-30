@@ -2,14 +2,13 @@
 import { Box, Flex, Image, Heading, Menu, MenuButton, IconButton, MenuList, MenuItem } from '@chakra-ui/react'
 import  Link  from 'next/link'
 import React from 'react'
-import '@fontsource/poppins/600.css'
 import {IoMenu} from 'react-icons/io5'
 
 const Navbar = () => {
   return (
-    <Flex zIndex='20' pos='fixed' justifyContent='space-between' alignItems='center' px={['20px','20px','50px','50px','70px']} w='100%'  h={['60px','60px','80px']}>
+    <Flex pos='fixed' zIndex='20' bgColor='transparent' backdropFilter='blur(104px)' justifyContent='space-between' alignItems='center' px={['20px','20px','50px','50px','70px']} w='100%'  h={['60px','60px','80px']}>
       <Link href='/' passHref>
-        <Image alt='some image' src='/logo.svg'/>
+        <Heading color='white' fontSize='24px' className='logo'> Dråq</Heading>
       </Link>
       <Flex w='424px' display={['none','none','flex']} justifyContent='space-between' alignItems='center'>
         <Box
@@ -68,7 +67,7 @@ const Navbar = () => {
             borderBottom: '2px solid #323B54',
           }}
         >
-          <Link passHref href='/contact'>
+          <Link passHref href='#contact'>
             <Heading color ='#A8AEBF' fontSize='16px' fontWeight='600'>Contact</Heading>
           </Link>
         </Box>
@@ -89,17 +88,17 @@ const Navbar = () => {
             </Link>
             <Link  href='/movies' passHref  >
               <MenuItem  command='⌘N'>
-                Movies
+                Projects
               </MenuItem>
             </Link>
             <Link  href='/shows' passHref>
               <MenuItem command='⌘⇧N'>
-                TV Shows
+                About
               </MenuItem>
             </Link>
-            <Link href='/actors' passHref>
+            <Link href='#contact' passHref>
               <MenuItem command='⌘O'>
-                Actors
+                Contact
               </MenuItem>
             </Link>
           </MenuList>

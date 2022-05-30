@@ -6,33 +6,9 @@ const config = {
 }
 
 const theme = extendTheme({
-  config,
-  components: {
-    Button: {
-      baseStyle: {
-        _focus: {
-          boxShadow: 'none',
-        }
-      },
-      MenuButton: {
-        baseStyle: {
-          _focus: {
-            boxShadow: 'none',
-          }
-        },
-      },
-      Link: {
-        baseStyle: {
-          _focus: {
-            outline: 'none',
-          }
-        },
-      }
-    }
-  },
   fonts: {
-    heading: `'Draq', sans-serif`,
-    body: `'Draq', sans-serif`,
+    heading: `'Clash Display', 'Aktura', 'Poppins', sans-serif`,
+    body: `'Poppins', sans-serif`,
   },
 })
 

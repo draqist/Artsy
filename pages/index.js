@@ -1,20 +1,125 @@
-import { Box, Heading, Image } from '@chakra-ui/react';
+import { Box, Flex, FormControl, FormHelperText, FormLabel, Heading, Image, Input, Link, Text } from '@chakra-ui/react';
 import Navbar from '../components/Navbar';
-import Fonts from '../Fonts';
+import NextLink from 'next/link'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { motion } from 'framer-motion'
+import ProjectCard from '../components/ProjectCard';
+
 
 export default function Home() {
-  const netlifyGreen = '012231' 
-  const shadeBlue = '091124' 
-  const shadeBlu = '091121'
-  const adeolablue = '10101A'
-  const trans ='1D1E29'
   return (
-    <Box w='100%' h='100vh' bg='#10101A'>
-      <Fonts/>
+    <Box w='100%' bg='#10101A'>
       <Navbar />
-      <Image src='/handright.webp' alt='placement' w='400px' />
       <Box px='20px'>
-        <Heading fontSize='36px'> Living to engineer products into breath-taking reality.</Heading>
+        <Flex justifyContent='center' alignItems='center' h='500px'>
+          {/* <Image src='/handright.webp' alt='placement' w='380px' /> */}
+          <Text fontSize='14px' color='white' fontFamily='Poppins'>Howdy 👋, I'm Abdullah and I develop, engineer and translate products through user interface designs into pixel-perfect, clean, optimal and reusable code. </Text>
+        </Flex>
+        <Box py='20px'>
+          <Heading fontSize='40px' lineHeight='40px' color='white' mb='8px'> Living to <Text as={motion.span} bgGradient='linear(45deg, #6bc5f8, #7928CA, #FF2080,#6bc5f8)' bgClip='text'> engineer products </Text> into breath-taking reality.</Heading>
+          <NextLink href='/projects' passHref>
+            <Link fontFamily='Poppins' color='#A8AEBF' fontSize='14px' _hover={{color: 'white'}}> View my projects <ExternalLinkIcon mx='2px' /> </Link>
+          </NextLink>
+        </Box>
+      </Box>
+      <Box id='projects' borderTop='1px solid' p='20px' pb='30px'>
+          <Heading>
+            Projects
+          </Heading>
+        <Flex justifyContent='center' mt='10px'>
+          <ProjectCard/>
+        </Flex>
+      </Box>
+      <Box id='contact' bg='rgba(0,0,0,0.6)' color='white' px='20px' py='30px' borderTop='px solid #D3D3D3'>
+        <Box py='20px'>
+          <Heading fontSize='18px' fontWeight='500' > Now that we're acquainted, shoot me a <Text as='span' bgGradient='linear(90deg, #b0f3f1,#ffcfdf)' bgClip='text'>Mail</Text>, DM me on <Text as='span' color='twitter.200'>Twitter,</Text> or connect with me on <Text as='span' color='linkedin.300'>LinkedIn,</Text>  let's cook magic 🪄  </Heading>
+        </Box>
+        <Box>
+          {/* <Heading fontSize='20px' fontWeight='500' color='white' mt='10px' fontFamily='Aktura'> Need to get in touch! Reach out  </Heading> */}
+          <Flex justifyContent='space-between' alignItems='center' py='20px'>
+            <Box w={['', '64px', '200px', '200px', '300px']}>
+              <NextLink passHref href=''>
+                <Link>
+                  <Flex alignItems='center' justifyContent='center'>
+                    <Image src='/icons8-gmail.svg' w='48px' />
+                    <Box display={['none', 'none', 'block']}>
+                    </Box>
+                  </Flex>
+                </Link>
+              </NextLink>
+            </Box>
+            <Box w={['', '64px', '200px', '200px', '300px']}>
+              <NextLink passHref href='https://twitter.com/Hackth8r'>
+                <Link>
+                  <Flex alignItems='center' justifyContent='center'>
+                    <Image src='/icons8-twitter.svg' w='48px' />
+                    <Box display={['none', 'none', 'block']}>
+                    </Box>
+                  </Flex>
+                </Link>
+              </NextLink>
+            </Box>
+            <Box w={['', '64px', '200px', '200px', '300px']}>
+              <NextLink passHref href='https://github.com/Draqode'>
+                <Link>
+                  <Flex alignItems='center' justifyContent='center'>
+                    <Image src='/icons8-github-squared.svg' w='48px' />
+                    <Box display={['none', 'none', 'block']}>
+                    </Box>
+                  </Flex>
+                </Link>
+              </NextLink>
+            </Box>
+            <Box w={['', '64px', '200px', '200px', '300px']}>
+              <NextLink passHref href='https://github.com/Draqode'>
+                <Link>
+                  <Flex alignItems='center' justifyContent='center'>
+                    <Image src='/icons8-linkedin.svg' w='48px' />
+                    <Box display={['none', 'none', 'block']}>
+                    </Box>
+                  </Flex>
+                </Link>
+              </NextLink>
+            </Box>
+            <Box w={['', '64px', '200px', '200px', '300px']}>
+              <NextLink passHref href=''>
+                <Link>
+                  <Flex alignItems='center' justifyContent='center'>
+                    <Image src='/icons8-hashnode.svg' w='48px' />
+                    <Box display={['none', 'none', 'block']}>
+                    </Box>
+                  </Flex>
+                </Link>
+              </NextLink>
+            </Box>
+          </Flex>
+        </Box>
+        <Box mt='0px'>
+          <Flex justifyContent='space-between' alignItems='center' py='20px'>
+            <Box w={['', '64px', '200px', '200px', '300px']}>
+              <NextLink passHref href='https://twitter.com/Hackth8r'>
+                <Link>
+                  <Flex alignItems='center' justifyContent='center'>
+                    <Image src='/icons8-discord-64.png' w='48px' />
+                    <Box display={['none', 'none', 'block']}>
+                    </Box>
+                  </Flex>
+                </Link>
+              </NextLink>
+            </Box>
+            <Box w={['', '64px', '200px', '200px', '300px']}>
+              <NextLink passHref href='https://github.com/Draqode'>
+                <Link>
+                  <Flex alignItems='center' justifyContent='center'>
+                    <Image src='/icons8-medium-monogram.svg' w='48px' />
+                    <Box display={['none', 'none', 'block']}>
+                    </Box>
+                  </Flex>
+                </Link>
+              </NextLink>
+            </Box>
+          </Flex>
+        </Box>
       </Box>
     </Box>
   )
