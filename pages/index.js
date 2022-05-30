@@ -29,7 +29,7 @@ export default function Home() {
           </NextLink>
         </Box>
       </Box>
-      <Box id='projects' borderTop='1px solid' borderBottom='1px solid' p='20px' pb='30px' mb='20px'>
+      <Box id='about' borderTop='1px solid' borderBottom='1px solid' p='20px' pb='30px' mb='20px'>
           <Heading>
             About Me
           </Heading>
