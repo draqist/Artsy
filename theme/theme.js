@@ -7,7 +7,7 @@ const config = {
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Clash Display', 'Aktura', 'Poppins', sans-serif`,
+    heading: `'Clash Display', 'Aktura', 'Poppins','Cabinet Grotesk' ,sans-serif`,
     body: `'Poppins', sans-serif`,
   },
 })

@@ -9,7 +9,8 @@ export default class Document extends NextDocument {
     return (
       <Html lang='en'>
         <link href="https://api.fontshare.com/css?f[]=clash-display@200,300,400,500,600&f[]=melodrama@300,400,500,600,700&f[]=aktura@400&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet" />
+        <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,400,300,200&display=swap" rel="stylesheet"></link>
         <Head />
         <body>
           {/* 👇 Here's the script */}

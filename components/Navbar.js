@@ -6,12 +6,12 @@ import {IoMenu} from 'react-icons/io5'
 
 const Navbar = () => {
   return (
-    <Flex zIndex='20' bgColor='transparent' backdropFilter='blur(14px)' justifyContent='space-between' alignItems='center' px={['20px','20px','50px','50px','70px']} w='100%'  h={['60px','60px','80px']}>
+    <Flex zIndex='20' pos='fixed' bgColor='rgb(0,0,0,0.2)' backdropFilter='blur(14px)' justifyContent='space-between' alignItems='center' px={['20px','20px','50px','50px','70px']} w='100%'  h={['60px','60px','80px']}>
       <Link href='/' passHref>
         <Heading color='white' fontSize='24px' className='logo'> Dråq</Heading>
       </Link>
-      <Flex w='424px' display={['none','none','flex']} justifyContent='space-between' alignItems='center'>
-        <Box
+      <Flex w='424px' color='white' display={['none','none','flex']} justifyContent='space-between' alignItems='center'>
+        {/* <Box
           px='8px'
           as='a'
           cursor='pointer'
@@ -23,9 +23,9 @@ const Navbar = () => {
           }}
         >
           <Link passHref href ='/'>
-            <Heading color ='#A8AEBF' fontSize='16px' fontWeight='600'>Home</Heading>
+            <Heading fontFamily='Poppins' fontWeight='200'  fontSize='14px' >Home</Heading>
           </Link>
-        </Box>
+        </Box> */}
         <Box
           as='a'
           cursor='pointer'
@@ -38,7 +38,7 @@ const Navbar = () => {
           }}
         >
           <Link passHref href='/project'>
-            <Heading color ='#A8AEBF' fontSize='16px' fontWeight='600'>Projects</Heading>
+            <Heading fontFamily='Poppins' fontWeight='200'  fontSize='14px' >Projects</Heading>
           </Link>
         </Box>
         <Box
@@ -53,7 +53,7 @@ const Navbar = () => {
           }}
         >
           <Link passHref href='/about'>
-            <Heading color ='#A8AEBF' fontSize='16px' fontWeight='600'>About</Heading>
+            <Heading fontFamily='Poppins' fontWeight='200'  fontSize='14px' >About</Heading>
           </Link>
         </Box>
         <Box
@@ -68,7 +68,7 @@ const Navbar = () => {
           }}
         >
           <Link passHref href='#contact'>
-            <Heading color ='#A8AEBF' fontSize='16px' fontWeight='600'>Contact</Heading>
+            <Heading fontFamily='Poppins' fontWeight='200'  fontSize='14px' >Contact</Heading>
           </Link>
         </Box>
       </Flex>
