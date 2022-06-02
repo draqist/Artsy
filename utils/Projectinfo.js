@@ -1,6 +1,6 @@
 const ProjectsData = [
   {
-    desc: 'Flix is web app where you can search for info about your favorite movies, tv shows and actors 😉.',
+    desc: 'Flix is web app where you can search for info about your favorite movies, tv shows and actors.',
     github: 'https://github.com/Draqode/flix',
     live_url: 'https://fliix.vercel.app',
     title: 'Flix',

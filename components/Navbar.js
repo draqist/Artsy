@@ -6,7 +6,7 @@ import {IoMenu} from 'react-icons/io5'
 
 const Navbar = () => {
   return (
-    <Flex zIndex='20' pos='fixed' bgColor='rgb(0,0,0,0.2)' backdropFilter='blur(14px)' justifyContent='space-between' alignItems='center' px={['20px','20px','50px','50px','70px']} w='100%'  h={['60px','60px','80px']}>
+    <Flex zIndex='20' bgColor='transparent' justifyContent='space-between' alignItems='center' px={['20px','20px','50px','50px','70px']} w='100%'  h={['60px','60px','80px']}>
       <Link href='/' passHref>
         <Heading color='white' fontSize='24px' className='logo'> Dråq</Heading>
       </Link>
