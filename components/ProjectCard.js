@@ -16,12 +16,11 @@ const ProjectCard = (props) => {
       <Box w='100%'>
         <Flex justifyContent='space-between' alignItems='center'  mt='18px'>
           <NextLink href={live_url } passHref>
-            <Link fontFamily='Poppins' color='#A8AEBF'  fontSize='14px' _hover={{color: 'white'}}> Live link <ExternalLinkIcon mx='2px' /> </Link>
+            <Link fontFamily='Poppins' isExternal color='#A8AEBF'  fontSize='14px' outline='0px' _focus={{ boxShadow:'none', outline: 'transparent' }} _hover={{color: 'white'}}> Live link <ExternalLinkIcon mx='2px' /> </Link>
           </NextLink>
           <NextLink href={ github } passHref>
-            <Link fontFamily='Poppins' color='#A8AEBF' fontSize='14px' _hover={{ color: 'white' }}>
+            <Link fontFamily='Poppins' color='#A8AEBF' isExternal fontSize='14px' outline='0px' _focus={{ boxShadow:'none', outline: 'transparent' }} _hover={{ color: 'white' }}>
               <Image alt='media logos' src='/icons8-github.svg' w='28px'/>
-
             </Link>
           </NextLink>
         </Flex>
